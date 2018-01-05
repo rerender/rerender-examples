@@ -4,8 +4,7 @@ const AssetsWebpackPlugin = require('assets-webpack-plugin');
 
 module.exports = {
     entry: {
-        client: './src/client.tsx',
-        server: './src/server.tsx'
+        client: './src/client.tsx'
     },
     module: {
         rules: [
@@ -29,6 +28,6 @@ module.exports = {
     output: {
         filename: '[name]-[chunkhash].js',
         chunkFilename: '[name]-[chunkhash].js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist/static')
     }
 };
