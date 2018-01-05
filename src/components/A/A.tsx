@@ -1,8 +1,7 @@
 import { h, StatelessComponent } from 'rerender';
 
 type Props = {
-    href?: string,
-    children?: any
+    href?: string
 };
 
 const A: StatelessComponent<Props> = ({ children, ...rest }) =>

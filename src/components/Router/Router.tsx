@@ -20,7 +20,12 @@ type State = {
 };
 
 export const getRouteByPath = (path: string, config: RoutesConfig) => {
-
+    // TODO: use params like :param
+    return config[path]();
+};
+export const getParamsByPath = (path: string, config: RoutesConfig) => {
+    // TODO: use params like :param
+    return {};
 };
 
 type Defaults = {
