@@ -1,18 +1,18 @@
-import { h, Component } from 'rerender';
+import { h, Component, ElementType } from 'rerender';
 import Router from '../Router/Router';
 
-const config = {
+export const routesConfig = {
     '/': () => import('../../routes/Index'),
     '/todos': () => import('../../routes/Todos'),
     '/todos/:id': () => import('../../routes/Todos')
 };
 
 type Props = {
-    path: string
+    Route: ElementType
 };
 
 export default class Application extends Component<Props> {
     render() {
-        return <Router config={config} path={this.props.path} />;
+        return <Router config={routesConfig} Route={this.props.Route} />;
     }
 }

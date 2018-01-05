@@ -1,5 +1,5 @@
 import { h, renderClient } from 'rerender';
+import Application, { routesConfig } from './components/Application/Application';
+import Index from './routes/Index';
 
-import Application from './components/Application/Application';
-
-renderClient(<Application />, document.getElementById('#root'));
+renderClient(<Application Route={Index} />, document.getElementById('#root'));

@@ -1,26 +1,43 @@
-import { h, Component } from 'rerender';
+import { h, Component, ElementType } from 'rerender';
+
+type RoutesConfig = {
+    [key: string]: () => ElementType | Promise<any>
+};
+
+type RouteParams = {
+    [key: string]: string
+};
+
 type Props = {
-    path: string,
-    config: {
-        [key: string]: () => Promise<any>
-    }
+    params?: RouteParams,
+    Route: ElementType,
+    config: RoutesConfig
 };
 
 type State = {
-    Route: any
+    Route: ElementType,
+    params: RouteParams
 };
 
-export default class Router extends Component<Props, State> {
-    props: Props;
-    state: State;
+export const getRouteByPath = (path: string, config: RoutesConfig) => {
 
-    componentWillReceiveProps(nextProps: Props) {
-        const { config, path } = nextProps;
+};
 
-        config[path]().then(Route => this.setState({
-            Route
-        }));
-    }
+type Defaults = {
+    params: RouteParams
+};
+
+const defaults: Defaults = {
+    params: {}
+};
+
+export default class Router extends Component<Props, State, typeof defaults> {
+    static defaults = defaults;
+
+    state: State = {
+        Route: this.props.Route,
+        params: this.props.params
+    };
 
     render() {
         const { Route } = this.state;
