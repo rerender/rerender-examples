@@ -27,12 +27,10 @@ type Defaults = {
     params: RouteParams
 };
 
-const defaults: Defaults = {
-    params: {}
-};
-
-export default class Router extends Component<Props, State, typeof defaults> {
-    static defaults = defaults;
+export default class Router extends Component<Props, State, Defaults> {
+    static defaults: Defaults = {
+        params: {}
+    };
 
     state: State = {
         Route: this.props.Route,

@@ -2,4 +2,5 @@ node_modules
 dist
 tags
 npm-debug.log
+webpack-assets.json
 .DS_Store
