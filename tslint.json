@@ -5,9 +5,7 @@
     ],
     "jsRules": {},
     "rules": {
-        "quotemark": {
-            "options": ["single"]
-        },
+        "quotemark": false,
         "arrow-parens": false,
         "ban-types": {
             "options": [

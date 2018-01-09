@@ -1,11 +1,13 @@
 import { h, Component, ElementType } from 'rerender';
 
-type RoutesConfig = {
-    [key: string]: () => ElementType | Promise<any>
-};
+type RouteType = ElementType | Promise<any>;
 
 type RouteParams = {
     [key: string]: string
+};
+
+export type RoutesConfig = {
+    [key: string]: () => RouteType
 };
 
 type Props = {
@@ -19,13 +21,22 @@ type State = {
     params: RouteParams
 };
 
-export const getRouteByPath = (path: string, config: RoutesConfig) => {
-    // TODO: use params like :param
-    return config[path]();
+export type GetRouteSignature = (path: string, config: RoutesConfig) => {
+    Route: RouteType,
+    params: RouteParams,
+    exist: boolean
 };
-export const getParamsByPath = (path: string, config: RoutesConfig) => {
+
+export const getRoute: GetRouteSignature = (path, config) => {
     // TODO: use params like :param
-    return {};
+    const Route = config[path]();
+    const exist = Boolean(Route);
+
+    return {
+        Route,
+        params: {},
+        exist
+    };
 };
 
 type Defaults = {

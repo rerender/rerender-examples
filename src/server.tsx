@@ -1,7 +1,7 @@
 import * as express from 'express';
-import { renderServer, h } from 'rerender';
+import { renderServer, h, Template } from 'rerender';
 import Application from './components/Application/Application';
-import Router, { getRouteByPath, getParamsByPath } from './components/Router/Router';
+import Router, { getRoute } from './components/Router/Router';
 import { routesConfig } from './routesConfig';
 
 const server = express();
@@ -25,21 +25,17 @@ server.get(staticRoot + '/*', (request, response) => {
 
 server.get('*', async (request, response) => {
     try {
-        const Route = await getRouteByPath(request.path, routesConfig);
-        if (Route) {
-            const html = renderServer(<Application>
-                <Router
-                    config={routesConfig}
-                    Route={Route}
-                    params={getParamsByPath(request.path, routesConfig)}
-                />
-            </Application>);
-            response.sendStatus(200);
-            response.send(html);
-        } else {
-            response.sendStatus(404);
-            response.send('<h1>Error 404</h1>');
-        }
+        const routeData = getRoute(request.path, routesConfig);
+        // FIXME: remove as Tempalte
+        const html = await renderServer(<Application>
+            <Router
+                config={routesConfig}
+                Route={await routeData.Route}
+                params={routeData.params}
+            />
+        </Application> as Template);
+        response.sendStatus(routeData.exist ? 200 : 404);
+        response.send(html);
     } catch (e) {
         response.sendStatus(500);
         response.send('<h1>Error 500</h1>' + e.message);
