@@ -36,9 +36,10 @@ server.get('*', async (request, response) => {
         </Application> as Template);
         response.sendStatus(routeData.exist ? 200 : 404);
         response.send(html);
+        response.end();
     } catch (e) {
         response.sendStatus(500);
         response.send('<h1>Error 500</h1>' + e.message);
+        response.end();
     }
-    response.end();
 });

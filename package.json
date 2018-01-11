@@ -6,7 +6,8 @@
     "scripts": {
         "build": "npm run build:static && npm run build:server",
         "build:static": "webpack",
-        "build:server": "tsc --module commonjs --outDir dist/server"
+        "build:server": "tsc --module commonjs --outDir dist/server",
+        "ts": "tsc --noEmit"
     },
     "repository": {
         "type": "git",

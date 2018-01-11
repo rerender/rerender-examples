@@ -5,7 +5,7 @@ const Index: StatelessComponent<{}> = () => <html>
     <head><title>Title</title></head>
     <body>
         <div class="block">text of div</div>
-        <A href='/todos'>Todos</A>
+        <A href="/todos">Todos</A>
     </body>
 </html>;
 
