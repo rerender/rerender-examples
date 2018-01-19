@@ -1,4 +1,4 @@
-import { RoutesConfig } from './components/Router/Router';
+import { RoutesConfig } from './packages/Router/Router';
 
 export const routesConfig: RoutesConfig = {
     '/': () => import('./routes/Index'),

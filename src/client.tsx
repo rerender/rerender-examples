@@ -1,6 +1,6 @@
 import { h, renderClient } from 'rerender';
 import Application from './components/Application/Application';
-import Router, { getRoute } from './components/Router/Router';
+import Router, { getRoute } from './packages/Router/Router';
 import { routesConfig } from './routesConfig';
 
 (async function() {

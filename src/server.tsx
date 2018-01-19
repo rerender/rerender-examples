@@ -1,7 +1,7 @@
 import * as express from 'express';
 import { renderServer, h, Template } from 'rerender';
 import Application from './components/Application/Application';
-import Router, { getRoute } from './components/Router/Router';
+import Router, { getRoute } from './packages/Router/Router';
 import { routesConfig } from './routesConfig';
 
 const server = express();

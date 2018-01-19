@@ -1,12 +1,14 @@
 import { h, StatelessComponent } from 'rerender';
 import A from '../components/A/A';
+import Layout from '../layouts/Layout';
 
-const Index: StatelessComponent<{}> = () => <html>
-    <head><title>Title</title></head>
-    <body>
-        <div class="block">text of div</div>
-        <A href="/todos">Todos</A>
-    </body>
-</html>;
+const Index: StatelessComponent<{}> = () => <Layout header="Main page">
+    <p>Links list:</p>
+    <ul>
+        <li>
+            <A href="/todos">Todos</A>
+        </li>
+    </ul>
+</Layout>;
 
 export default Index;

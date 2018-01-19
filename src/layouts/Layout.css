@@ -1,0 +1,25 @@
+body {
+    background-color: #f4f4f4;
+    color: #bbb;
+    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.layout__container {
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.layout__header {
+    color: rgba(175, 47, 47, 0.15);
+    font-size: 100px;
+    margin-bottom: 20px;
+}
+
+.layout__content {
+    margin: 20px 0;
+}
+
+.layout__footer {
+    text-align: center;
+}
