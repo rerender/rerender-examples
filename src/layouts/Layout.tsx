@@ -15,7 +15,7 @@ const Layout: StatelessComponent<Props> = ({ header, children }) => <Html>
             {children}
         </div>
         <div class="layout__footer">
-            &copy; rerender todos
+            \u00a9 rerender todos
         </div>
     </div>
 </Html>;
