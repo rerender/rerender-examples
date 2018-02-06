@@ -33,7 +33,7 @@ class Application extends Component {
 
     handleClick(event) {
         const { url, domEvent } = event.payload;
-        const external = /s^(\w*:)?\/\//.test(url);
+        const external = /^(\w*:)?\/\//.test(url);
 
         if (url && !external) {
             domEvent.preventDefault();
