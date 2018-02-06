@@ -1,7 +1,0 @@
-node_modules
-dist
-tags
-npm-debug.log
-webpack-assets.json
-.vimrc
-.DS_Store
