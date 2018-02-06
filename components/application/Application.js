@@ -18,11 +18,13 @@ class Application extends Component {
             route: this.props.route
         }, this.props.route.title);
 
-        // setInterval(() => {
-        //     let { route } = this.props;
-        //
-        //     this.dispatch(NAVIGATE_TO_URL, route.page === 'Index' ? '/forms/' : '/');
-        // }, 2000);
+        setInterval(() => {
+            let { route } = this.props;
+
+            if (['Forms', 'Forms2'].indexOf(route.page) !== -1) {
+                this.dispatch(NAVIGATE_TO_URL, route.page === 'Forms2' ? '/forms/' : '/forms2/');
+            }
+        }, 2000);
     }
 
     handlePopState(event) {

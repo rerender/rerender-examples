@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "scripts": {
-        "start": "npm install && ./node_modules/.bin/concurrently --kill-others \"npm run static\" \"npm run server\"",
+        "start": "./node_modules/.bin/concurrently --kill-others \"npm run static\" \"npm run server\"",
         "static": "./node_modules/.bin/watchify ./client/ClientApplication.js -t babelify --outfile ./dist/ClientApplication.js --debug --verbose",
         "server": "node ./server/index.js"
     },

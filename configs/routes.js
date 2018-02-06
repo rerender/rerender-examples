@@ -27,6 +27,10 @@ const routes = {
         page: 'Forms',
         title: 'Forms page'
     },
+    '/forms2/': {
+        page: 'Forms2',
+        title: 'Forms page 2'
+    },
     '/404/': {
         page: 'Error404',
         title: 'Not found'

@@ -1,23 +1,28 @@
 import { Component, h } from 'rerender';
 import ComplexFormRow from './ComplexFormRow';
+import { mask } from '../maskController/MaskController';
 
 class ComplexForm extends Component {
     render() {
-        return <form onsubmit={this.handleSubmit}>
-            <ComplexFormRow title="Фамилия">
+        return <form onsubmit={this.handleSubmit} uniqid='form_about'>
+            <p>Не смотря на то, что компоненты, лежащие выше формы изменяются динамически, значения введенные пользователем не теряются после перерисовки. Всё благодаря операции move в DOM и заданию uniqid. Попробуйте написать текст в textarea, переместить курсор и убедитесь в том, что положение каретки сохраняется. Если выделить текст, то выделение тоже сохранится. </p>
+            <a href="/">Вернуться на главную страницу</a>
+            <ComplexFormRow title="Last name">
                 <input
                     name="lastName"
-                    placeholder="Введите фамилию"
+                    placeholder="Input last name"
                 />
             </ComplexFormRow>
-            <ComplexFormRow title="Имя">
+            <ComplexFormRow title="First name">
                 <input
                     name="firstName"
-                    placeholder="Введите Имя"
+                    placeholder="Input first name"
                 />
             </ComplexFormRow>
-            <ComplexFormRow title="Дата рождения">
+            <ComplexFormRow title="Birthday">
                 <input
+                    controller={mask}
+                    mask="__.__.____"
                     name="birthDate"
                     placeholder="DD.MM.YYYY"
                 />

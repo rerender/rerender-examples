@@ -4,9 +4,14 @@ import ComplexForm from '../components/complexForm/ComplexForm';
 
 function Forms(){
     return <Layout title="forms">
-        <div>
-            <ComplexForm />
-        </div>
+        <h2>Layout with table</h2>
+        <table>
+            <tr>
+                <td>
+                    <ComplexForm />
+                </td>
+            </tr>
+        </table>
     </Layout>;
 }
 
