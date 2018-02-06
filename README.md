@@ -1,4 +1,4 @@
-# rerender-todos demo
+# rerender-examples
 ## Usage
 ```bash
 git clone https://github.com/rerender/rerender-examples.git . && cd ./rerender-examples
