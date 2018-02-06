@@ -1,0 +1,15 @@
+{
+  "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+  "verbose": true,
+  "globals": {
+    "navigator": {
+      "product": "ReactNative"
+    }
+  },
+  "unmockedModulePathPatterns": [
+    "<rootDir>/*"
+  ],
+  "preprocessorIgnorePatterns": [
+    "<rootDir>/node_modules"
+  ]
+}
