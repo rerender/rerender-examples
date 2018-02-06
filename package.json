@@ -12,7 +12,7 @@
         "lodash": "^4.5.1",
         "performance-now": "^2.1.0",
         "ramda": "^0.24.0",
-        "rerender": "0.0.4"
+        "rerender": "0.0.5"
     },
     "private": true,
     "devDependencies": {
