@@ -41,8 +41,8 @@ class Animations extends Component {
                 width: '200px',
                 height: '200px',
                 position: 'absolute',
-                left: 30,
-                top: 30,
+                left: '90px',
+                top: '90px',
                 backgroundColor: this.state.color,
                 border: '1px solid #000'
             }}
