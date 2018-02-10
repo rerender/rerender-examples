@@ -9,6 +9,9 @@ class Animations extends Component {
         this.toggleColor = this.toggleColor.bind(this);
         this.handleDiv = this.handleDiv.bind(this);
         this.rotate = this.rotate.bind(this);
+    }
+
+    componentDidMount() {
         setInterval(this.toggleColor, 2000);
     }
 
