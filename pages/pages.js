@@ -1,5 +1,6 @@
 export { default as Index } from './Index';
 export { default as Stream } from './Stream';
+export { default as Animations } from './Animations';
 export { default as Controllers } from './Controllers';
 export { default as Sierpinsky } from './Sierpinsky';
 export { default as Forms } from './Forms';
