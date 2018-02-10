@@ -1,7 +1,7 @@
 # rerender-examples
 ## Install
 ```bash
-git clone https://github.com/rerender/rerender-examples.git . && cd ./rerender-examples
+git clone https://github.com/rerender/rerender-examples.git && cd ./rerender-examples
 ```
 
 ## Run
