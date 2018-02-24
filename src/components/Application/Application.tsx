@@ -1,4 +1,4 @@
-import { h, Component, ElementType } from 'rerender';
+import { h, Component } from 'rerender';
 
 type Props = {};
 

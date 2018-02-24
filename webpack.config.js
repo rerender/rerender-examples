@@ -21,7 +21,7 @@ module.exports = {
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
-            minChunks: ({ resource }) => /node_modules|work_old/.test(resource),
+            minChunks: ({ resource }) => /node_modules|rr/.test(resource),
         }),
         new AssetsWebpackPlugin()
     ],

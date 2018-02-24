@@ -1,12 +1,13 @@
 import { h, StatelessComponent, Renderable } from 'rerender';
 import Html from './Html';
-import './Layout.css';
+// import './Layout.css';
 
 type Props = {
-    header: Renderable
+    header: Renderable,
+    title: string
 };
 
-const Layout: StatelessComponent<Props> = ({ header, children }) => <Html>
+const Layout: StatelessComponent<Props> = ({ header, children, title }) => <Html title={title}>
     <div class="layout__container">
         <div class="layout__header">
             {header}

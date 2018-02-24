@@ -1,4 +1,5 @@
-import { h, Component, ElementType } from 'rerender';
+import { h, Component, StatelessComponent, ComponentClass } from 'rerender';
+type ElementType = StatelessComponent<any> | ComponentClass;
 
 type RouteType = ElementType | Promise<any>;
 

@@ -1,4 +1,4 @@
-import { h, StatelessComponent, Doctype, Fragment, Renderable, connect } from 'rerender';
+import { h, StatelessComponent, Doctype, Fragment, Renderable/* , connect */ } from 'rerender';
 import { StoreState } from '../selectors/types';
 
 type Props = {
@@ -21,5 +21,5 @@ const map = ({ title }: StoreState) => ({
     title
 });
 
-// FIXME: any
-export default (connect as any)(map)(Html);
+export default Html;
+// export default (connect as any)(map)(Html);
